@@ -19,16 +19,16 @@ namespace Hur_Manga_Versaler
             //Kollar statusen på sidan
             if (textBox.Enabled)
             {
-                int numberOfCapitals = Model.TextAnalyzer.numberOfCapitals(textBox.Text);
-                textBox.Enabled = false;
-                sendButton.Text = "Återställ";
-                resultLabel.Text = String.Format("Texten har {0} versaler.", numberOfCapitals);
-                resultLabel.Visible = true;
+                int numberOfCapitals = Model.TextAnalyzer.numberOfCapitals(textBox.Text);//Koden som kollar hur många versaler körs
+                textBox.Enabled = false;//Gör så att man inte kan ändra i boxen
+                sendButton.Text = "Återställ";//sendButton ändras då den default är något annat
+                resultLabel.Text = String.Format("Texten har {0} versaler.", numberOfCapitals);//Text som skriver ut hur många versaler det är
+                resultLabel.Visible = true;//Gör den synbar
             }
             else
             {
-                textBox.Text = "";
-                textBox.Enabled = true;
+                textBox.Text = "";//Tom box
+                textBox.Enabled = true;//Enablar den igen ifall koden ovan har körts
                 sendButton.Text = "Räkna ut antalet versaler";
                 resultLabel.Text = "";
                 resultLabel.Visible = false;

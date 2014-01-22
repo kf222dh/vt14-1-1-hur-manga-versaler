@@ -12,10 +12,9 @@ namespace Hur_Manga_Versaler.Model
         //Retunerar antal versaler i en sträng
         public static int numberOfCapitals(string text)
         {
-            Regex rgx = new Regex(@"[^A-ZÅÄÖ]");
-            string capInText = rgx.Replace(text, "");
-
-            return capInText.Length;
+            Regex rgx = new Regex(@"[^A-ZÅÄÖ]");//Inga stora bokstäver med svenska tecken också
+            string capInText = rgx.Replace(text, "");//Tar bort alla andra tecken
+            return capInText.Length;//Räknar ut det som är kvar, alltså bara stora bokstäver
         }
     }
 }
