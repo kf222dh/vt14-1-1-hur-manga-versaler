@@ -29,9 +29,6 @@ namespace Hur_Manga_Versaler
             {
                 textBox.Text = "";//Tom box
                 textBox.Enabled = true;//Enablar den igen ifall koden ovan har körts
-                sendButton.Text = "Räkna ut antalet versaler";
-                resultLabel.Text = "";
-                resultLabel.Visible = false;
             }
         }
     }
